@@ -1,0 +1,642 @@
+* {
+    box-sizing: border-box;
+}
+
+h2, 
+h3 {
+    margin-left: 10px;
+    color: #666666;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header" 
+    "nav" 
+    "main";
+}
+
+.myname {
+    font-size: small;
+}
+
+.bell {
+    transform-origin: 50% 50%;
+}
+
+.bell:hover {
+    animation: ring 2.5s ease-in-out;
+}
+
+@keyframes ring {
+    20% {
+        transform: rotate(-30deg);
+    }
+    40% {
+        transform: rotate(30deg);
+    }
+    60% {
+        transform: rotate(-30deg);
+    }
+    80% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.dot {
+     display:inline-block;
+}
+
+.dot::before {
+    content: "•";
+    color: #4BE54A;
+    font-size: 25px;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    height: auto;
+    background-color: rgb(70, 68, 110);
+    max-width: 100%;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h1 {
+    margin-right: auto;
+    margin-left: 10px;
+    color: white;
+}
+
+header img {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+header h3 {
+    margin-right: 10px;
+    color: white;
+}
+
+.notifications {
+    height: auto;
+    border-right: 2px black solid;
+    padding-right: 10px;
+    margin-right: 10px;
+  
+}
+
+.notifications svg {
+    height: 40px;
+    width: 40px;
+}
+
+nav {
+    grid-area: nav;
+    background-color:  rgb(70, 68, 110);
+    height: auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav a {
+    margin: 0 25px;
+}
+
+nav img {
+    height: 10%;
+    width: 10%;
+}
+
+nav img:hover {
+    border-bottom: solid 5px #4BE54A;
+}
+
+main {
+    grid-area: main;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main-header h2 {
+    margin-left: 10px;
+    color: #666666;
+}
+
+.main-header div {
+    background-color: rgb(224, 214, 214);
+    padding-left: 95px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.main-header input {
+    margin-right: 10px;
+    align-self: center;
+}
+
+.alert-banner {
+    background-color: rgb(70, 68, 110);
+    width: 80%;
+    height: 45px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+#traffic-chart,
+#daily-chart,
+#mobile-chart {
+    width: 95vw;
+}
+
+.widget-container-full,
+.widget-container-half {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.traffic-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.traffic-header h3 {
+    margin-left: 10px;
+    color: #666666;
+}
+
+.traffic ul {
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+ul li {
+    display: inline-block;
+    color: #666666;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+.traffic,
+.daily,
+.mobile, 
+.social,
+.members,
+.activity,
+.message {
+    border-bottom: 1px solid lightslategray;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+.settings {
+    margin-top: 10px;
+}
+
+.social {
+    grid-area: social;
+}
+
+
+.social svg {
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin: auto;
+}
+
+.social-image {
+    background-color: rgb(70, 68, 110);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.social-container {
+    display: flex;
+    width: 90%;
+    background-color: #F5F3F3;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+    border: solid 1px #666666;
+}
+
+.social-text {
+    width: 60px;
+    height: auto;
+}
+
+.media {
+    color: rgb(70, 68, 110);
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.num {
+    color: #666666;
+    font-weight: 600;
+    font-size: x-large;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.members-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid #ECEAEA;
+    margin: 10px auto;
+}
+
+.members-container img {
+    border-radius: 50%;
+}
+
+.members-text {
+    margin-left: 15px;
+}
+
+.members-container p,
+.members-text p {
+    color: #666666;
+
+}
+
+.members-container p {
+    margin-left: auto;
+}
+
+.members-text a {
+    color: rgb(105, 100, 187);
+}
+
+.message form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto;
+}
+
+form input,
+form textarea{
+    margin-bottom: 10px;
+}
+
+form input {
+    margin-top: 5px;
+    height: 30px;
+}
+
+form textarea {
+    height: 200px;
+}
+
+form button,
+#save {
+    background-color: rgb(70, 68, 110);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+form button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.settings {
+    padding-bottom: 30px;
+}
+
+.subsetting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch-light {
+    width: 50%;
+    margin-top: 15px;
+}
+
+.switch-light strong {
+    display: block;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+#timezone {
+    margin-bottom: 15px;
+}
+
+#save,
+#cancel {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#cancel {
+    background-color: #666666;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-rows: auto;
+    
+        grid-template-areas: 
+        "header header" 
+        "nav main";
+    }
+
+    h1 {
+        margin-left: 20px;
+    }
+
+    .myname {
+        font-size: large;
+        font-weight: 800;
+    }
+
+    .notifications svg {
+        height: 50px;
+        width: 50px;
+    }
+
+    header img {
+    width: 4%;
+    height: 4%;
+    }
+
+    nav a {
+        display: block;
+        width: auto;
+        height: auto;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    nav a:hover {
+        border-left: solid 4px #4BE54A;
+    }
+
+    nav img {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav img:hover {
+        border-bottom: none;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 50%;
+    }
+
+    .main-header {
+        grid-column: 1 / span 2;
+    }
+
+    .main-header div {
+        padding-left: 50vw;
+    }
+
+    #alert {
+        grid-column: 1 / span 2;
+    }
+
+    .alert-banner {
+        width: 90%;
+    }
+
+    .traffic,
+    .social {
+        grid-column: 1 / span 2;
+    }
+
+    .social {
+        grid-row: 5 / span 1;
+    }
+
+    .daily,
+    .members,
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile,
+    .activity,
+    .settings {
+        grid-column: 2 / span 1;
+    }
+    
+    .widget-container-full {
+        width: 90vw;
+    }
+
+    .widget-container-half {
+        width: 45vw;
+    }
+
+    .traffic,
+    .daily,
+    .mobile, 
+    .social,
+    .members,
+    .activity,
+    .message {
+        border-bottom: none;
+        padding-bottom: 0px;
+    }
+
+    .members .members-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        grid-template-areas: 
+        "picture member-text "
+        "picture date ";
+    }
+
+    .members-container img {
+        grid-area: picture;
+    }
+
+    .members-text {
+        grid-area: member-text;
+        text-align: justify;
+    }
+
+    .date {
+        grid-area: date;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .subsetting {
+        flex-direction: column;
+    }
+
+    .switch-light {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form textarea {
+        height: 273px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+
+    .main-header input {
+        width: 550px;
+    }
+
+    .main-header h2,
+    .traffic-header h3,
+    .daily h3,
+    .social h3,
+    .members h3,
+    .message h3,
+    .mobile h3,
+    .activity h3,
+    .settings h3 {
+        margin-left: 40px;
+    }
+
+    .myname {
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+
+    .alert-banner {
+        width: 95%;
+    }
+
+    nav a {
+        margin-top: 25px;
+    }
+
+    .widget-container-full {
+        width: 95vw;
+    }
+
+    .widget-container-half {
+        width: 42.5vw;
+    }
+
+    .members .members-container {
+        display: flex;
+        align-items: center;
+        width: 90%;
+    }
+
+    .members .members-container .members-text {
+        text-align: left;
+    }
+
+    .date {
+        margin-right: initial;
+    }
+
+
+    .settings-button {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .switch-light strong {
+        display: inline-block;
+    }
+
+    .switch-light {
+        width: auto;
+    }
+
+    .subsettings1 {
+        margin-top: 50px;
+        margin-right: 28em;
+    }
+
+    #timezone {
+        margin-top: 58px;
+        width: 630px;
+    }
+
+    #save {
+        padding-right: 120px;
+        padding-left: 120px;
+        margin-right: 20px;
+    } 
+
+    #cancel {
+        padding-right: 120px;
+        padding-left: 120px;
+        margin-left: 20px;
+    }
+
+    .social-div {
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .social-container {
+        width: 30%;
+    }
+
+    .social-text {
+        margin-right: 50px;
+    }
+
+    .num {
+        font-size: xx-large;
+    }
+}
+
+
+
+
+
